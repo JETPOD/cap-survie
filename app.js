@@ -4,9 +4,10 @@ const $ = (s, r = document) => r.querySelector(s);
 const main = $("#main");
 
 /* ---------- état ---------- */
+const MEM = {};
 const store = {
-  get(k, d) { try { const v = localStorage.getItem("capsurvie:" + k); return v ? JSON.parse(v) : d; } catch { return d; } },
-  set(k, v) { try { localStorage.setItem("capsurvie:" + k, JSON.stringify(v)); } catch {} }
+  get(k, d) { return k in MEM ? MEM[k] : d; },
+  set(k, v) { MEM[k] = v; }
 };
 const S = {
   aud: store.get("aud", "g"),          // j | g | p
