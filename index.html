@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cap Survie · serious game des bons réflexes de survie</title>
+<meta name="description" content="Serious game de survie : scénarios à décisions, gestion de ressources sur 72 heures et quiz chronométré. Milieu naturel et crises, pour jeunes, grand public et professionnels.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23C4501B'/%3E%3Cpath d='M16 6l4 10-4 10-4-10z' fill='%23F2EEE3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="top">
+  <div class="wrap top-in">
+    <button class="brand" data-go="home" aria-label="Cap Survie, accueil">
+      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 6l4 10-4 10-4-10z" fill="var(--accent)"/><circle cx="16" cy="16" r="1.6" fill="currentColor"/></svg>
+      <span>Cap Survie</span>
+    </button>
+    <nav class="nav" aria-label="Navigation principale">
+      <button data-go="scen">Scénarios</button>
+      <button data-go="res">72 heures</button>
+      <button data-go="quiz">Quiz</button>
+      <button data-go="bilan">Bilan</button>
+      <button data-go="sources">Sources</button>
+    </nav>
+    <button class="theme" id="themeBtn" aria-label="Changer de thème">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+<main id="main" class="wrap"></main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p><strong>Urgences :</strong> 112 (Europe) · 15 SAMU · 18 pompiers · 17 police · 114 par SMS pour les personnes sourdes ou malentendantes.</p>
+    <p>Outil pédagogique. Il ne remplace ni une formation aux premiers secours (PSC1) ni les consignes des autorités.</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
